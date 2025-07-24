@@ -1,0 +1,8 @@
+python-dotenv
+python-dotenv>=1.0.0
+numpy>=1.21.0
+pydub>=0.25.0
+pynput
+sounddevice
+soundfile
+
