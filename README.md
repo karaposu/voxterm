@@ -22,7 +22,7 @@ Your Keyboard → VoxTerm → VoiceEngine → AI Voice API
 
 ```python
 from voxterm import VoxTermCLI
-from realtimevoiceapi import VoiceEngine
+from voicechatengine import VoiceEngine
 
 # Create your voice engine
 engine = VoiceEngine(api_key="your-key")
@@ -136,7 +136,7 @@ engine.on_user_transcript = func(text: str)
 ```
 
 Works out of the box with:
-- `realtimevoiceapi.VoiceEngine`
+- `voicechatengine.VoiceEngine`
 - Any engine with a similar interface
 
 ## 🎨 Customization
@@ -183,7 +183,7 @@ That's exactly what VoxTerm provides - nothing more, nothing less.
 ```python
 import asyncio
 from voxterm import VoxTermCLI
-from realtimevoiceapi import VoiceEngine
+from voicechatengine import VoiceEngine
 
 async def main():
     engine = VoiceEngine(api_key="your-key")
