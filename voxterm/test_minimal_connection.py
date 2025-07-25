@@ -13,7 +13,7 @@ load_dotenv()
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from realtimevoiceapi import VoiceEngine, VoiceEngineConfig
+from voicechatengine import VoiceEngine, VoiceEngineConfig
 
 
 async def test_connection():

@@ -22,7 +22,7 @@ load_dotenv()
 
 # Import VoxTerm and VoiceEngine
 from voxterm import VoxTermCLI
-from realtimevoiceapi import VoiceEngine, VoiceEngineConfig
+from voicechatengine import VoiceEngine, VoiceEngineConfig
 
 
 class TextModeWrapper:

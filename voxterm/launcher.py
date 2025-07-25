@@ -27,12 +27,11 @@ async def launch_voxterm(api_key: Optional[str] = None):
         print("   or create a .env file")
         return
     
-    # Import VoiceEngine
     try:
-        from realtimevoiceapi import VoiceEngine, VoiceEngineConfig
-    except ImportError:
-        print("❌ realtimevoiceapi not found")
-        print("   pip install realtimevoiceapi")
+        from voicechatengine import VoiceEngine, VoiceEngineConfig
+    except ImportError as e:
+        print(f"❌ Import error: {e}")
+        print("   pip install voicechatengine")
         return
     
     # Create engine with basic config

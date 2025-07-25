@@ -11,7 +11,7 @@ from enum import Enum
 
 # Import Identity system
 try:
-    from realtimevoiceapi import Identity, IDENTITIES
+    from voicechatengine import Identity, IDENTITIES
 except ImportError:
     # Fallback if not available
     Identity = None
@@ -101,7 +101,7 @@ class VoiceSettings:
 @dataclass
 class IdentitySettings:
     """Identity configuration for system prompts and behavior"""
-    # Available identities from realtimevoiceapi
+    # Available identities from voicechatengine
     available_identities: Dict[str, Any] = field(default_factory=lambda: IDENTITIES.copy())
     
     # Current identity name

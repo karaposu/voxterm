@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 load_dotenv()
 
-from realtimevoiceapi import VoiceEngine, VoiceEngineConfig
+from voicechatengine import VoiceEngine, VoiceEngineConfig
 
 
 async def test_text_mode():

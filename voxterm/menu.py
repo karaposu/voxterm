@@ -259,7 +259,7 @@ class VoxTermMenu:
                 # Apply current identity settings after connection
                 identity = self.settings.identity.get_current_identity()
                 if identity and hasattr(self.engine, 'configure_session'):
-                    from realtimevoiceapi import SessionConfig
+                    from voicechatengine import SessionConfig
                     identity_config = SessionConfig.from_identity(identity)
                     await self.engine.configure_session(identity_config)
                     print(f"✅ Applied identity: {self.current_identity}")
@@ -350,7 +350,7 @@ class VoxTermMenu:
             # Apply identity settings to engine config
             if hasattr(self.engine, 'config'):
                 # Update the engine's session config with the identity
-                from realtimevoiceapi import SessionConfig
+                from voicechatengine import SessionConfig
                 new_config = SessionConfig.from_identity(identity)
                 
                 # Apply the key settings from identity
@@ -364,7 +364,7 @@ class VoxTermMenu:
             # If connected, update the session configuration
             if self.connected and hasattr(self.engine, 'configure_session'):
                 try:
-                    from realtimevoiceapi import SessionConfig
+                    from voicechatengine import SessionConfig
                     identity_config = SessionConfig.from_identity(identity)
                     await self.engine.configure_session(identity_config)
                     print(f"✅ Identity changed to: {identity_name}")
