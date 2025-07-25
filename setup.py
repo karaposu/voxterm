@@ -5,7 +5,7 @@ import os
 
 setup(
     name='voxterm',  # Package name
-    version='0.0.2',  # Version of your package
+    version='0.0.3',  # Version of your package
     author='enes kuzucu',  # Your name
     
     description=' lightweight command-line interface that makes it easy to test VoiceChatEngine ', 
@@ -13,7 +13,7 @@ setup(
     long_description_content_type='text/markdown',  # Type of the long description
     
     packages=find_packages(),  # Automatically find packages in the directory
-    install_requires=[ 'python-dotenv'],
+    install_requires=[ 'python-dotenv', 'voicechatengine'],
     entry_points={
         'console_scripts': [
             'voxterm=voxterm.launcher:main',
